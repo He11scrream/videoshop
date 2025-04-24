@@ -15,8 +15,6 @@ q * Copyright 2017-2019 the original author or authors.
  */
 package videoshop.customer;
 
-import java.util.List;
-
 import org.salespointframework.core.DataInitializer;
 import org.salespointframework.useraccount.Password.UnencryptedPassword;
 import org.salespointframework.useraccount.Role;
@@ -26,6 +24,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
+
+import java.util.List;
 
 /**
  * Initializes default user accounts and customers. The following are created:

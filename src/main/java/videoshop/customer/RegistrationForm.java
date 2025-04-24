@@ -16,7 +16,6 @@
 package videoshop.customer;
 
 import jakarta.validation.constraints.NotEmpty;
-
 import org.springframework.validation.Errors;
 
 /**
@@ -72,4 +71,6 @@ class RegistrationForm {
 	public void validate(Errors errors) {
 		// Complex validation goes here
 	}
+
+
 }

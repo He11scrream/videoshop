@@ -16,7 +16,6 @@
 package videoshop.customer;
 
 import jakarta.validation.Valid;
-
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,6 +43,10 @@ class CustomerController {
 	// Lektüre: http://docs.spring.io/spring/docs/current/spring-framework-reference/html/validation.html
 	@PostMapping("/register")
 	String registerNew(@Valid RegistrationForm form, Errors result) {
+
+		if (customerManagement.userExists(form.getName())) {
+			result.rejectValue("name", "user.exists", "user is already exists");
+		}
 
 		if (result.hasErrors()) {
 			return "register";

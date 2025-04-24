@@ -19,14 +19,13 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
+import org.jmolecules.ddd.types.Identifier;
+import org.salespointframework.core.AbstractAggregateRoot;
+import org.salespointframework.useraccount.UserAccount;
 import videoshop.customer.Customer.CustomerIdentifier;
 
 import java.io.Serializable;
 import java.util.UUID;
-
-import org.jmolecules.ddd.types.Identifier;
-import org.salespointframework.core.AbstractAggregateRoot;
-import org.salespointframework.useraccount.UserAccount;
 
 // (｡◕‿◕｡)
 // Salespoint bietet nur eine UserAccount Verwaltung, für weitere Attribute sollte eine extra

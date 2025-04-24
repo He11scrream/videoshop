@@ -68,6 +68,9 @@ public class CustomerManagement {
 
 		return customers.save(new Customer(userAccount, form.getAddress()));
 	}
+	public boolean userExists(String name) {
+		return userAccounts.findByUsername(name).isPresent();
+	}
 
 	/**
 	 * Returns all {@link Customer}s currently available in the system.
